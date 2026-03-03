@@ -1,0 +1,53 @@
+# This is a basic workflow that is manually triggered
+
+name: Build and Deploy Site
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches: [main]
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/carpentries/workbench-docker:latest
+      env:
+        WORKBENCH_PROFILE: "ci"
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+        RENV_PATHS_ROOT: /home/rstudio/lesson/renv
+        RENV_PROFILE: "lesson-requirements"
+        RENV_CONFIG_EXTERNAL_LIBRARIES: "/usr/local/lib/R/site-library"
+      volumes:
+        - ${{ github.workspace }}:/home/rstudio/lesson
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Debugging Info"
+        run: |
+          cd /home/rstudio/lesson
+          echo "Current Directory: $(pwd)"
+          echo "RENV_HASH is $RENV_HASH"
+          ls -lah /home/rstudio/.workbench
+          ls -lah $(pwd)
+          Rscript -e 'sessionInfo()'
+        shell: bash
+      - name: "Mark Repository as Safe"
+        run: |
+          git config --global --add safe.directory $(pwd)
+        shell: bash
+
+      - uses: carpentries/actions/build-container-deps@main
+        with:
+          CACHE_VERSION: ''
+          LESSON_PATH: /home/rstudio/lesson
+          WORKBENCH_TAG: "latest"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: "Run Container and Build Site"
+        id: build-and-deploy
+        uses: carpentries/actions/build-and-deploy@main
+        with:
+          reset: false
+          skip-manage-deps: false

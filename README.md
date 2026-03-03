@@ -20,7 +20,7 @@ how it is better to automate analysis using functions instead of repeating analy
 steps manually.
 
 The rendered version of the lesson is available at:
-[https://swcarpentry.github.io/python-novice-inflammation/](https://swcarpentry.github.io/python-novice-inflammation/).
+[https://vgilbart.github.io/python-novice-inflammation/](https://vgilbart.github.io/python-novice-inflammation/).
 
 This lesson is also available in [R] and [MATLAB].
 
@@ -93,18 +93,18 @@ industry and government. More information can be found [here][cp-about].
 [good-practices]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
 [R]: https://github.com/swcarpentry/r-novice-inflammation
 [MATLAB]: https://github.com/swcarpentry/matlab-novice-inflammation
-[episode01]: https://swcarpentry.github.io/python-novice-inflammation/01-intro.html
-[episode02]: https://swcarpentry.github.io/python-novice-inflammation/02-numpy.html
-[episode03]: https://swcarpentry.github.io/python-novice-inflammation/03-matplotlib.html
-[episode04]: https://swcarpentry.github.io/python-novice-inflammation/04-lists.html
-[episode05]: https://swcarpentry.github.io/python-novice-inflammation/05-loop.html
-[episode06]: https://swcarpentry.github.io/python-novice-inflammation/06-files.html
-[episode07]: https://swcarpentry.github.io/python-novice-inflammation/07-cond.html
-[episode08]: https://swcarpentry.github.io/python-novice-inflammation/08-func.html
-[episode09]: https://swcarpentry.github.io/python-novice-inflammation/09-errors.html
-[episode10]: https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html
-[episode11]: https://swcarpentry.github.io/python-novice-inflammation/11-debugging.html
-[episode12]: https://swcarpentry.github.io/python-novice-inflammation/12-cmdline.html
+[episode01]: https://vgilbart.github.io/python-novice-inflammation/01-intro.html
+[episode02]: https://vgilbart.github.io/python-novice-inflammation/02-numpy.html
+[episode03]: https://vgilbart.github.io/python-novice-inflammation/03-matplotlib.html
+[episode04]: https://vgilbart.github.io/python-novice-inflammation/04-lists.html
+[episode05]: https://vgilbart.github.io/python-novice-inflammation/05-loop.html
+[episode06]: https://vgilbart.github.io/python-novice-inflammation/06-files.html
+[episode07]: https://vgilbart.github.io/python-novice-inflammation/07-cond.html
+[episode08]: https://vgilbart.github.io/python-novice-inflammation/08-func.html
+[episode09]: https://vgilbart.github.io/python-novice-inflammation/09-errors.html
+[episode10]: https://vgilbart.github.io/python-novice-inflammation/10-defensive.html
+[episode11]: https://vgilbart.github.io/python-novice-inflammation/11-debugging.html
+[episode12]: https://vgilbart.github.io/python-novice-inflammation/12-cmdline.html
 [travis_url]: https://travis-ci.org/swcarpentry/python-novice-inflammation
 [travis_svg]: https://travis-ci.org/swcarpentry/python-novice-inflammation.svg?branch=gh-pages
 [lesson-example]: https://carpentries.github.io/lesson-example
